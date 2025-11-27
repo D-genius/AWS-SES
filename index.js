@@ -5,6 +5,7 @@ const { sendEmail } = require('./utils');
 require('dotenv').config();
 
 const app = express();
+const host = process.env.BASE_URL_LOCAL;
 const url = process.env.BASE_URL;
 const PORT = process.env.PORT || 3000;
 
@@ -60,9 +61,9 @@ app.post('/sendEmail', async (req, res) => {
 // });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on ${url}:${PORT}`);
-    // console.log(`Server is running on ${url}`);
+app.listen(PORT, host, () => {
+    console.log(`Server is running on http://${host}:${PORT}`);
+    console.log(`Production Server is running on ${url}`);
     // return res.status(200).json({
     //     success: true,
     //     message: 'Email sent successfully'
@@ -71,6 +72,7 @@ app.listen(PORT, () => {
 
 //show response from server
 app.get('/', (req, res) => {
+    // res.send('Welcome to the AWS SES Email Service');
     res.status(200).json({
         status: 'Server is running',
         timestamp: new Date()
