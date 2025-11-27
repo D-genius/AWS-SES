@@ -61,7 +61,7 @@ app.post('/sendEmail', async (req, res) => {
 // });
 
 // Start the server
-app.listen(PORT, host, () => {
+app.listen(PORT, () => {
     console.log(`Server is running on http://${host}:${PORT}`);
     console.log(`Production Server is running on ${url}`);
     // return res.status(200).json({
