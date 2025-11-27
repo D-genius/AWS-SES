@@ -1,0 +1,34 @@
+{
+  "name": "shinraitechnologies.io",
+  "version": "1.0.0",
+  "description": "shinrai official website",
+  "keywords": [
+    "AWS",
+    "Shinrai",
+    "Snowflake",
+    "Informatica",
+    "cloud",
+    "migration"
+  ],
+  "homepage": "https://github.com/shinraitechnologies/shinraitechnologies.io#readme",
+  "bugs": {
+    "url": "https://github.com/shinraitechnologies/shinraitechnologies.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinraitechnologies/shinraitechnologies.io.git"
+  },
+  "license": "ISC",
+  "author": "T.Diero",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.929.0",
+    "aws-sdk": "^2.1692.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
