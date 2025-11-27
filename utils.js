@@ -82,7 +82,7 @@ const sendEmail = async (recipientEmail, recipientEmail2, senderEmail, fName, lN
     
 };
 
-// sendEmail("diero.timothy@shinraitechnologies.io", "timothydiero254@gmail.com","Timothy","Diero", "Kenya", "1234567890", "This is a test message from Shinrai Technologies.");
+// sendEmail("diero.timothy@shinraitechnologies.io", "sales@shinraitechnologies.io", "test@gmail.com","Tester","mail", "Kenya", "01234567890", "This is a test message from Shinrai Technologies.");
 
 module.exports = {
     sendEmail
