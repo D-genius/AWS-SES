@@ -39,6 +39,8 @@ app.post('/sendEmail', async (req, res) => {
 
     try{
         await sendEmail(recipientEmail,recipientEmail2, senderEmail, fName, lName, country, phone, message);
+        console.log('Email sent successfully');
+        
         return res.status(200).json({
             success: true,
             message: 'Email sent successfully'
@@ -58,10 +60,18 @@ app.post('/sendEmail', async (req, res) => {
 // });
 
 // Start the server
-app.listen(PORT, () => {
+app.listen(PORT, (res) => {
     console.log(`Server is running on http://localhost:${PORT}`);
     // return res.status(200).json({
     //     success: true,
     //     message: 'Email sent successfully'
     // });
+});
+
+//show response from server
+app.get('/', (req, res) => {
+    res.status(200).json({
+        status: 'Server is running',
+        timestamp: new Date()
+    });
 });
