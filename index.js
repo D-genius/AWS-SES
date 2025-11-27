@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 const url = process.env.BASE_URL;
-// const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // Serve static files from the 'public' directory
@@ -60,9 +60,9 @@ app.post('/sendEmail', async (req, res) => {
 // });
 
 // Start the server
-app.listen(url, (res) => {
-    // console.log(`Server is running on http://localhost:${PORT}`);
-    console.log(`Server is running on ${url}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on ${url}:${PORT}`);
+    // console.log(`Server is running on ${url}`);
     // return res.status(200).json({
     //     success: true,
     //     message: 'Email sent successfully'
